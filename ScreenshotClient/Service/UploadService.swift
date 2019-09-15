@@ -51,7 +51,7 @@ class UploadService {
                                 if let responseSuccess = json["success"] as? Bool {
                                     if responseSuccess {
                                         if let path = json["path"] as? String {
-                                            success?(host + path)
+                                            success?(path)
                                             return
                                         } else {
                                             errorMessage = "Upload failed. Resource path not returned"
